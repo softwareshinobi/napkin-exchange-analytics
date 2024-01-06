@@ -1,15 +1,12 @@
 # The Napkin Exchange
 
-...
+The napkin exchange is a REST-enabled securities trading simulation platform.
 
 ![...](docs/imagery/cover.png)
 
 ## prologue
 
-I did this for Her.
-
-I did this for the Universe.
-
+i did this for Her. i did this for the Universe.
 
 ## market watch dashboard
 
