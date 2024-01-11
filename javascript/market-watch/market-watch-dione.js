@@ -45,7 +45,7 @@ function formatTextFromFirstTextBox() {
 
 		type: "GET",
 
-		url: "https://api2.napkinexchange.softwareshinobi.digital/candlestick/DIONE",
+		url: "https://api2.napkinexchange.softwareshinobi.digital/candlestick/CALLISTO",
 
 	//	data: textFromFirstAndSecondTextBox,
 
@@ -59,7 +59,7 @@ function formatTextFromFirstTextBox() {
 
 		success: function (data, status, jqXHR) {
 
-			setTextOfFirstTextBoxToRewrittenText(data);
+			updateBottomCornerPricing(data);
 
 		},
 
@@ -81,39 +81,36 @@ function formatTextFromFirstTextBox() {
   
 }
 
-function setTextOfFirstTextBoxToRewrittenText(responsePayload) {
+function updateBottomCornerPricing(responsePayload) {
 
-    console.debug(" -> :: setTextOfFirstTextBoxToRewrittenText()");
-    console.debug("responsePayload / ",responsePayload);
-    //const result = parseFloat(rewrittenText)*100;
-
-
+console.debug(" -> :: updateBottomCornerPricing()");
 
 var responsePayloadParsed  = JSON.parse(responsePayload);
 
-//alert("responsePayloadParsed / " + responsePayloadParsed.price);
+$("#bottom-corner-symbol-pricing").text(responsePayloadParsed.price);
 
+//
 
-   // aaaa = result.toFixed(2);
+var amountGain = (responsePayloadParsed.price - responsePayloadParsed.lastDayPrice).toFixed(2);
 
-    /////////////////////////////////////
+console.debug("amountGain / "+amountGain);
 
-   // const inverse = (1.0 - parseFloat(rewrittenText));
+var percentageChange = ((amountGain / responsePayloadParsed.lastDayPrice) * 100).toFixed(2);;
 
-  //  vvv = inverse.toFixed(2)*100;
+if (percentageChange >= 0) {
 
-//alert($( "responsePayload" ).data());
+$("#bottom-corner-symbol-diff").text("+"+amountGain+" / " + "+"+percentageChange+"%");
 
-//$( "responsePayload" ).data();
+$("#bottom-corner-symbol-diff").removeClass("text-danger");
+$("#bottom-corner-symbol-diff").addClass("text-success");
 
-console.log( $( "responsePayload" ).data() );
+} else {
 
+$("#bottom-corner-symbol-diff").text(amountGain+" / " +percentageChange+"%");
+$("#bottom-corner-symbol-diff").addClass("text-danger");
 
-    $("#bottom-corner-symbol-pricing").text(responsePayloadParsed.price);
+}
 
-  //  $("#percentageOutputButtonInverse").html(vvv+"% different");
-
- //   console.debug(" <- :: setTextOfFirstTextBoxToRewrittenText()");
 
 }
 

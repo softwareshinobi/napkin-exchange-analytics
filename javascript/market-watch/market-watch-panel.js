@@ -29,10 +29,21 @@ console.log("1");
 
 			var responsePayloadParsed  = JSON.parse(responsePayload);
 
-console.log("2");
-
             $("#panel-europa-pricing").text(responsePayloadParsed.price);
 
+            var amountGain = (responsePayloadParsed.price - responsePayloadParsed.lastDayPrice).toFixed(2);
+
+            var percentageChange = ((amountGain / responsePayloadParsed.lastDayPrice) * 100).toFixed(2);;
+
+            if (percentageChange >= 0) {
+
+            $("#panel-europa-change").text("+"+amountGain+" / " + "+"+percentageChange+"%");
+
+            } else {
+
+            $("#panel-europa-change").text(amountGain+" / " +percentageChange+"%");
+
+            }
 		},
 
 		error: function (jqXHR, status) {
@@ -67,10 +78,21 @@ console.log("1");
 
 			var responsePayloadParsed  = JSON.parse(responsePayload);
 
-console.log("2");
-
             $("#panel-pandora-pricing").text(responsePayloadParsed.price);
 
+            var amountGain = (responsePayloadParsed.price - responsePayloadParsed.lastDayPrice).toFixed(2);
+
+            var percentageChange = ((amountGain / responsePayloadParsed.lastDayPrice) * 100).toFixed(2);;
+
+            if (percentageChange >= 0) {
+
+            $("#panel-pandora-change").text("+"+amountGain+" / " + "+"+percentageChange+"%");
+
+            } else {
+
+            $("#panel-pandora-change").text(amountGain+" / " +percentageChange+"%");
+
+            }
 		},
 
 		error: function (jqXHR, status) {
@@ -106,7 +128,20 @@ function updateCALLISTOPanel() {
 			var responsePayloadParsed  = JSON.parse(responsePayload);
 
             $("#panel-callisto-pricing").text(responsePayloadParsed.price);
+           
+            var amountGain = (responsePayloadParsed.price - responsePayloadParsed.lastDayPrice).toFixed(2);
 
+            var percentageChange = ((amountGain / responsePayloadParsed.lastDayPrice) * 100).toFixed(2);;
+
+            if (percentageChange >= 0) {
+
+            $("#panel-callisto-change").text("+"+amountGain+" / " + "+"+percentageChange+"%");
+
+            } else {
+
+            $("#panel-callisto-change").text(amountGain+" / " +percentageChange+"%");
+
+            }
 		},
 
 		error: function (jqXHR, status) {
@@ -142,6 +177,20 @@ function updateDIONEPanel() {
 			var responsePayloadParsed  = JSON.parse(responsePayload);
 
             $("#panel-dione-pricing").text(responsePayloadParsed.price);
+
+            var amountGain = (responsePayloadParsed.price - responsePayloadParsed.lastDayPrice).toFixed(2);
+
+            var percentageChange = ((amountGain / responsePayloadParsed.lastDayPrice) * 100).toFixed(2);;
+
+            if (percentageChange >= 0) {
+
+            $("#panel-dione-change").text("+"+amountGain+" / " + "+"+percentageChange+"%");
+
+            } else {
+
+            $("#panel-dione-change").text(amountGain+" / " +percentageChange+"%");
+
+            }
 
 		},
 
