@@ -46,49 +46,44 @@ myChart.options.animations.colors = false; // disables animation defined by the 
 myChart.options.animations.x = false; // disables animation defined by the 'x' property
 myChart.options.transitions.active.animation.duration = 0; // disables the animation for 'active' mode
 
- 
-
- 
-// logic to get new data
 var getData = function() {
-  $.ajax({
-    url: 'https://api2.napkinexchange.softwareshinobi.digital/candlestick/history/CALLISTO',
-    success: function(data) {
-     
-  
- $.each(data, function(key, value) {
 
-    myChart.data.datasets[0].data.pop();
+    $.ajax({
 
-    myChart.data.labels.pop();
-  });
+        url: 'https://api2.napkinexchange.softwareshinobi.digital/candlestick/history/CALLISTO',
 
-//var responsePayloadParsed  = JSON.parse(value);
- $.each(data, function(key, value) {
+        success: function(data) {
 
-console.log("11key / " + key);
-console.log("value / " + value.ask);
+            $.each(data, function(key, value) {
 
-      myChart.data.labels.push(value.marketDate);
-      myChart.data.datasets[0].data.push(value.ask);
-      
-      // re-render the chart
-    
-  //myChart.update();
+                myChart.data.datasets[0].data.pop();
+
+                myChart.data.labels.pop();
+
+            });
+
+            $.each(data, function(key, value) {
+
+                console.log("key / " + key);
+
+                console.log("value / " + value);
+
+                console.log("value.ask / " + value.ask);
+
+                myChart.data.labels.push(value.id);
+
+                myChart.data.datasets[0].data.push(value.ask);
+
+            });
+
+            myChart.update();
+
+        }
+
     });
 
-  myChart.update();
-
-
- // process your data to pull out what you plan to use to update the chart
-      // e.g. new label and a new data point
-  //    console.log("data / "+data);
-      // add new label and data point to chart's underlying data structures
-
-    }
-  });
 };
 
 getData();
-// get new data every 3 seconds
+
 setInterval(getData, 4000);
