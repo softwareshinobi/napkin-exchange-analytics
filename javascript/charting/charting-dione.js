@@ -52,7 +52,7 @@ myChart.options.transitions.active.animation.duration = 0; // disables the anima
 // logic to get new data
 var getData = function() {
   $.ajax({
-    url: 'https://api2.napkinexchange.softwareshinobi.digital/candlestick/history/DIONE',
+    url: 'https://api2.napkinexchange.softwareshinobi.digital/candlestick/history/CALLISTO',
     success: function(data) {
      
   
@@ -67,10 +67,10 @@ var getData = function() {
  $.each(data, function(key, value) {
 
 console.log("11key / " + key);
-console.log("value / " + value.stockPrice);
+console.log("value / " + value.ask);
 
       myChart.data.labels.push(value.marketDate);
-      myChart.data.datasets[0].data.push(value.stockPrice);
+      myChart.data.datasets[0].data.push(value.ask);
       
       // re-render the chart
     
