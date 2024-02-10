@@ -6,11 +6,13 @@ $(document).ready(function () {
 
 function fetchCandlestickHistory() {
 
+    console.log("fetchCandlestickHistory / " + apiSymbol);
+
 	$.ajax({
 
 		type: "GET",
 
-		url: apiURLBase + "/candlestick/DIONE",
+		url: apiURLBase + "/candlestick/" + apiSymbol,
 
 		contentType: "application/json; charset=utf-8",
 

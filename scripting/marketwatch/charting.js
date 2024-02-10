@@ -17,7 +17,7 @@ var myChart = new Chart(ctx_live, {
 
         borderColor:'#00c0ef',
 
-        label: apiSymbol,
+        label: "",
 
         }]
 
