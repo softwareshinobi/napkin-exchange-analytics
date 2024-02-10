@@ -1,21 +1,25 @@
 
 $(document).ready(function () {
+    
+//    alert("tick history");
 
-	setInterval(displayAllActivityRecords,1000);
+	setInterval(fetchCandleHistory,1000);
 
 });
 
-function displayAllActivityRecords() {
+function fetchCandleHistory() {
 
-	console.debug(" -> :: displayAllActivityRecords()");	
+	console.debug("enter > fetchCandleHistory");
+
+	console.debug("traderExchangeURL / ", traderExchangeURL);
 
 	$.ajax({
 
 		type: "GET",
 		
-//		url: "https://api2.napkinexchange.softwareshinobi.digital/candlestick/detailed/DIONE",
+        url: traderExchangeURL + "/candlestick/history/DIONE",
 
-		url: "http://localhost:8888/candlestick/DIONE",
+
 
 		contentType: "text/plain",
 		
