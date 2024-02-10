@@ -81,7 +81,7 @@ function fetchAccountInformation() {
 
 		type: "GET",
 		
-		url: "http://localhost:8888/account/"+currentTraderUsername,
+    	url: traderExchangeURL + "/account/"+currentTraderUsername,
 
 		contentType: "text/plain",
 		

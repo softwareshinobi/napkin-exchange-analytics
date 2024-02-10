@@ -1,5 +1,5 @@
 
-traderExchangeURL="http://localhost:8888";
+traderExchangeURL="https://apis.napkinexchange.softwareshinobi.digital";
 
 currentTraderUsername="";
 

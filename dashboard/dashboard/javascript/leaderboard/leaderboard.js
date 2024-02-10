@@ -49,19 +49,19 @@ function setResultsArea(responseData) {
 
     var trHTML = '';
 
-    for (var i =0;i< responseData.length; i++) {
+    for (var i = 0; i < responseData.length; i++) {
 
-    trHTML += '<tr>';
+        trHTML += '<tr>';
 
-    trHTML += '<td class="METADATA DEBUG">' + responseData[i].ranking + '</td>';
+        trHTML += '<td class="METADATA DEBUG">' + responseData[i].ranking + '</td>';
 
-    trHTML += '<td class="METADATA DEBUG">' + responseData[i].username + '</td>';
+        trHTML += '<td class="METADATA DEBUG">' + responseData[i].username + '</td>';
 
-    trHTML += '<td class="METADATA DEBUG">' + responseData[i].totalProfits + '</td>';
+        trHTML += '<td class="METADATA DEBUG">' + responseData[i].totalProfits + '</td>';
 
-    trHTML += '</tr>';	
-		  
-}
+        trHTML += '</tr>';	
+		      
+    }
 
     $('#activity-display-table  > tbody').html(trHTML); 
 

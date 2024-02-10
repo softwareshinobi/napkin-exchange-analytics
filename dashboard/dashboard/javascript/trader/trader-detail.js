@@ -6,7 +6,6 @@ $(document).ready(function () {
 
 });
 
-
 function visualizeTraderDetails() {
 
 	console.debug(" -> :: visualizeTraderDetails()");	
@@ -24,6 +23,8 @@ function visualizeTraderDetails() {
 		success: function (data, status, jqXHR) {
             
             insertTradeDetailContent(data);           
+
+            showholdings(data);
 
 		},
 
@@ -46,6 +47,8 @@ function insertTradeDetailContent(responseData) {
 
 var trHTML = '';
 
+console.log("responseData / " + responseData);
+
 trHTML += '<tr>';
 
 trHTML += '<td class="METADATA DEBUG">' + responseData.username + '</td>';
@@ -56,19 +59,17 @@ trHTML += '<td class="METADATA DEBUG">' + responseData.totalProfits + '</td>';
 
 trHTML += '</tr>';	
 
+console.log("trHTML", trHTML);
+
+$('#trader-detail > tbody').html(trHTML); 
+
+}
+
+function showholdings(responseData) {
+
+var trHTML = '';
+
 for (var i =0;i< responseData.stocksOwned.length; i++) {
-
-trHTML += '<tr>';
-
-trHTML += '<td class="METADATA DEBUG">' + '</td>';
-
-trHTML += '</tr>';
-
-trHTML += '<tr>';
-
-trHTML += '<td class="METADATA DEBUG">' + '</td>';
-
-trHTML += '</tr>';
 
 trHTML += '<tr>';
 
@@ -82,9 +83,9 @@ trHTML += '</tr>';
 
 }
 
-$('#activity-display-table  > tbody').html(trHTML); 
-
 console.log("trHTML", trHTML);
+
+$('#trader-holdings > tbody').html(trHTML); 
 
 }
 
@@ -130,29 +131,7 @@ function populateOrderDetailSections(responseData) {
 
 var trHTML = '';
 
-trHTML += '<tr>';
-
-trHTML += '<td class="METADATA DEBUG">' + responseData.username + '</td>';
-
-trHTML += '<td class="METADATA DEBUG">' + responseData.accountBalance + '</td>';
-
-trHTML += '<td class="METADATA DEBUG">' + responseData.totalProfits + '</td>';
-
-trHTML += '</tr>';	
-
 for (var i =0;i< responseData.length; i++) {
-
-trHTML += '<tr>';
-
-trHTML += '<td class="METADATA DEBUG">' + '</td>';
-
-trHTML += '</tr>';
-
-trHTML += '<tr>';
-
-trHTML += '<td class="METADATA DEBUG">' + '</td>';
-
-trHTML += '</tr>';
 
 trHTML += '<tr>';
 
@@ -162,17 +141,12 @@ trHTML += '<td class="METADATA DEBUG">' + responseData[i].sharesToBuy + '</td>';
 trHTML += '<td class="METADATA DEBUG">' + responseData[i].limitPrice + '</td>';
 trHTML += '<td class="METADATA DEBUG">' + responseData[i].limitOrderType + '</td>';
 
-
-//trHTML += '<td class="METADATA DEBUG">' + responseData.stocksOwned[i].amountOwned + '</td>';
-
-//trHTML += '<td class="METADATA DEBUG">' + responseData.stocksOwned[i].costBasis + '</td>';
-
 trHTML += '</tr>';	
 
 }
 
-$('#activity-display-table  > tbody').html(trHTML); 
-
 console.log("trHTML", trHTML);
+
+$('#trader-open-orders > tbody').html(trHTML); 
 
 }
