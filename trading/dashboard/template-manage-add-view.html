@@ -1,0 +1,501 @@
+<html lang="en"><head>
+
+    <title>
+    
+        Tick History / Napkin Exchange
+        
+    </title>
+
+    <!-- Template Header // Begin -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+<!-- Template Header // End -->
+
+</head>
+<!-- Template Menu // Begin -->
+  <body class="nav-md">
+  
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+
+
+<div class="navbar nav_title" style="border: 0;">
+
+    <a href="index.html" class="site_title"><i class="fa fa-paw"></i> 
+
+        <span>
+        
+            Software Shinobi
+            
+        </span>
+
+    </a>
+
+</div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Welcome back,</span>
+                <h2>Software Shinobi</h2>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+
+
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+      
+        <div class="menu_section">
+
+                <h3>General</h3>
+
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-home"></i> Streaming Feeds <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="tick-history.html">Tick Pricing Feed</a></li>
+                    </ul>
+                  </li>
+                  
+<!-- article magick // begin -->
+
+<li>
+
+    <a>
+    
+    <i class="fa fa-edit"></i>
+    
+        Leader Board
+        
+        <span class="fa fa-chevron-down"></span>
+        
+    </a>
+
+    <ul class="nav child_menu">
+    
+        <li>
+        
+            <a href="leaderboard.html">
+            
+                Leaderboard Tracker
+                
+            </a>
+            
+        </li>
+        
+    </ul>
+    
+</li>
+
+<!-- article magick // end -->
+
+<!-- cloud admin // begin -->
+
+<li>
+
+    <a>
+    
+    <i class="fa fa-edit"></i>
+    
+        Trader Manage
+        
+        <span class="fa fa-chevron-down"></span>
+        
+    </a>
+
+    <ul class="nav child_menu">
+    
+        <li>
+        
+            <a href="create-trader.html">
+            
+                Create New Trader
+                
+            </a>
+            
+        </li>
+
+        <li>
+        
+            <a href="add-trader-funds.html">
+            
+                Fund Account
+                
+            </a>
+            
+        </li>
+
+        <li>
+        
+            <a href="buy-stock.html">
+            
+                Buy Stocks
+                
+            </a>
+            
+        </li>
+
+        <li>
+        
+            <a href="trader.html">
+            
+                Trader Info
+                
+            </a>
+            
+        </li>
+        
+    </ul>
+    
+</li>
+
+<!-- cloud admin // end -->
+
+
+<!-- get money // begin -->
+
+<li>
+
+    <a>
+    
+    <i class="fa fa-edit"></i>
+    
+        Monitoring
+        
+        <span class="fa fa-chevron-down"></span>
+        
+    </a>
+
+    <ul class="nav child_menu">
+    
+        <li>
+        
+            <a href="get-money-calculator-valkyrie.html">
+            
+                Monitor Upstream Servers
+                
+            </a>
+            
+        </li>
+        
+    </ul>
+    
+</li>
+
+<!-- article magick // end -->
+
+</ul>
+
+</div>
+
+</div>
+
+<!-- /sidebar menu -->
+
+<!-- /menu footer buttons -->
+
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+            <div class="nav_menu">
+                <div class="nav toggle">
+                  <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                </div>
+                <nav class="nav navbar-nav">
+                <ul class=" navbar-right">
+                   
+             
+			   </ul>
+              </nav>
+            </div>
+          </div>
+        <!-- /top navigation -->
+<!-- Template Menu // End -->
+
+
+
+ 	<!-- page content -->
+
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Manage Activity Task</h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5   form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+
+                     
+                     
+                     
+                                     <div class="clearfix"></div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="x_panel">
+
+                            <div class="x_title">
+
+                                <h2>Add New Activity</h2>
+
+                                <div class="clearfix"></div>
+
+                            </div>
+
+                            <div class="x_content">
+
+                               
+
+                                    <div id="spacersituatio">
+
+                                        <label class="col-form-label col-md-1 col-sm-1 label-align">
+
+                                            Project
+
+                                        </label>
+
+                                        <div class="col-md-4 col-sm-4 ">
+
+                                            <input id="category" th:field="*{category}" type="text" required="required" class="form-control ">
+
+                                        </div>
+
+                                        <label class="col-form-label col-md-1 col-sm-1 label-align">
+
+                                            State
+
+                                        </label>
+
+                                        <div class="col-md-4 col-sm-4 ">
+
+                                            <input id="state" type="text" required="required" class="form-control ">
+
+                                        </div>
+
+                                        <br />	<br />	<br />
+
+                                        <label class="col-form-label col-md-1 col-sm-1 label-align">
+                                            Description
+                                        </label>
+
+                                        <div class="col-md-9 col-sm-9 ">
+
+                                            <input id="description" type="text" required="required" class="form-control ">
+
+                                        </div>
+
+                                        <button  class="btn btn-success" onclick="processForm()">Add Activity</button>
+
+                                    </div>
+
+                               
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+
+              
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+
+                                <h2>Activity Backlog</h2>
+
+                                <div class="clearfix"></div>
+
+                            </div>
+                            <div class="x_content">
+
+                                <p>Simple table with project listing with progress and editing options</p>
+
+                                <!-- start project list -->
+
+                                <table id="activity-display-table" class="table table-striped projects">
+
+                                    <thead>
+                                    <tr>
+
+                                        <th class="col-md-1">
+
+                                            ID
+
+                                        </th>
+
+                                        <th style="width: 20%">
+
+                                            Project
+
+                                        </th>
+
+                                        <th>
+
+                                            Activity
+
+                                        </th>
+
+                                        <th style="width: 20%">
+
+                                            Status
+
+                                        </th>
+
+                                        <th style="width: 20%">
+
+                                            Actions
+
+                                        </th>
+
+                                    </tr>
+
+                                    </thead>
+
+                                    <tbody>
+
+                                    <tr th:each="activityTask : ${activityTaskList}">
+
+                                        <td th:text="${activityTask.id}"></td>
+
+                                        <td th:text="${activityTask.category}"></td>
+
+                                        <td th:text="${activityTask.description}"></td>
+
+                                        <td th:text="${activityTask.status}" ></td>
+
+                                        <td>
+
+                                            <a class="btn btn-primary btn-xs" th:href="@{'/delete-activity?id=' + ${activityTask.id}}">
+
+                                                <i class="fa fa-trash-o"></i>
+
+                                                Mark Complete
+
+                                            </a>
+
+                                        </td>
+
+                                    </tr>
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+       
+                     
+                     
+                     
+                     
+                     
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+
+<!-- Footer // Begin -->2222222222<footer>
+
+    <div class="pull-right">
+    
+        Software Shinobi Dashboard by
+        
+        <a href="https://softwareshinobi.online">
+        
+            Software Shinobi
+            
+        </a>
+        
+    </div>
+
+    <div class="clearfix"></div>
+
+</footer>
+
+<!-- /footer content -->
+
+</div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-2.1.3.js"></script> 
+
+<script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>      
+
+<script src="../vendors/fastclick/lib/fastclick.js"></script>
+
+<script src="../vendors/nprogress/nprogress.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js "></script>
+
+<script src="../build/js/custom.min.js"></script>
+
+<script src="javascript/trader/trader.js"></script>
+
+<script src="tick-history.js"></script>
+
+</body>
+
+</html>

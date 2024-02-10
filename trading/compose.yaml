@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+
+    software-shinobi-dashboard:
+
+        container_name: software-shinobi-dashboard
+
+        image: softwareshinobi/software-shinobi-dashboard:latest
+
+        restart: always
+        
+        ports:
+
+            - "42018:80"
+            
+        networks:
+        
+            - network-software-shinobi-dashboard
+            
+networks:
+
+    network-software-shinobi-dashboard:

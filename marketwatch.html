@@ -1,0 +1,469 @@
+<html>
+
+<head>
+
+<title>
+
+Market Watch / The Napkin Exchange by Software Shinobi
+
+</title>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
+
+<link rel="stylesheet" href="assets/vendors/flag-icon-css/css/flag-icon.min.css">
+
+<link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+
+<link rel="stylesheet" href="assets/vendors/font-awesome/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+<style type="text/css">/* Chart.js */
+
+@keyframes chartjs-render-animation{from{opacity:.99}to{opacity:1}}.chartjs-render-monitor{animation:chartjs-render-animation 1ms}.chartjs-size-monitor,.chartjs-size-monitor-expand,.chartjs-size-monitor-shrink{position:absolute;direction:ltr;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1}.chartjs-size-monitor-expand>div{position:absolute;width:1000000px;height:1000000px;left:0;top:0}.chartjs-size-monitor-shrink>div{position:absolute;width:200%;height:200%;left:0;top:0}
+
+body {
+
+    background-color: #343a40;
+
+    background-image:url("https://dwityuniverse.softwareshinobi.digital/imagery/the-universe.jpg");
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div fff="">
+
+<div class="content-wrapper pb-12">
+
+<div class="page-header flex-wrap">
+
+<h3 class="mb-0">
+
+Market Watch
+
+<span class="pl-0 h6 pl-sm-2 text-muted d-inline-block">
+
+<i>
+
+<b>The Napkin Exchange</b> <i>
+
+
+built by
+
+<i> <b>Software Shinobi</b>
+
+</i>
+
+</span>
+
+</h3>
+
+</div>
+
+<div class="row">
+
+<div class="col-xl-3 col-lg-12 stretch-card grid-margin">
+
+<div class="row">
+
+<div onclick="onClickDionePanel()" class="col-xl-12 col-md-6 stretch-card grid-margin grid-margin-sm-0 pb-sm-3">
+
+<div class="card bg-warning">
+
+<div class="card-body px-3 py-4">
+
+<div class="d-flex justify-content-between align-items-start">
+
+<div class="color-card">
+
+<p class="mb-0 color-card-head">
+
+Dione
+
+</p>
+
+<h2 id="panel-dione-pricing" class="text-white">
+
+--
+
+</h2>
+
+</div>
+
+<i class="card-icon-indicator mdi mdi-cube-outline bg-inverse-icon-warning"></i>
+
+</div>
+
+<h6 id="panel-dione-change" class="text-white">
+
+--
+
+</h6>
+
+</div>
+
+</div>
+
+</div>
+
+<div onclick="onClickCallistoPanel()" class="col-xl-12 col-md-6 stretch-card grid-margin grid-margin-sm-0 pb-sm-3">
+
+<div class="card bg-danger">
+
+<div class="card-body px-3 py-4">
+
+<div class="d-flex justify-content-between align-items-start">
+
+<div class="color-card">
+
+<p class="mb-0 color-card-head">
+
+Callisto
+
+</p>
+
+<h2 id="panel-callisto-pricing" class="text-white">
+
+--
+
+</h2>
+
+</div>
+
+<i class="card-icon-indicator mdi mdi-cube-outline bg-inverse-icon-danger"></i>
+
+</div>
+
+<h6 id="panel-callisto-change" class="text-white">
+
+--
+
+</h6>
+
+</div>
+
+</div>
+
+</div>
+
+<div onclick="onClickEuropaPanel()" class="col-xl-12 col-md-6 stretch-card grid-margin grid-margin-sm-0 pb-sm-3 pb-lg-0 pb-xl-3">
+
+<div class="card bg-primary">
+
+<div class="card-body px-3 py-4">
+
+<div class="d-flex justify-content-between align-items-start">
+
+<div class="color-card">
+
+<p class="mb-0 color-card-head">
+
+Europa
+
+</p>
+
+<h2 id="panel-europa-pricing" class="text-white">
+
+--
+
+</h2>
+
+</div>
+
+<i class="card-icon-indicator mdi mdi-cube-outline bg-inverse-icon-primary"></i>
+
+</div>
+
+<h6 id="panel-europa-change" class="text-white">
+
+--
+
+</h6>
+
+</div>
+
+</div>
+
+</div>
+
+<div onclick="onClickPandoraPanel()" class="col-xl-12 col-md-6 stretch-card pb-sm-3 pb-lg-0">
+
+<div class="card bg-success">
+
+<div class="card-body px-3 py-4">
+
+<div class="d-flex justify-content-between align-items-start">
+
+<div class="color-card">
+
+<p class="mb-0 color-card-head">
+
+Pandora
+
+</p>
+
+<h2 id="panel-pandora-pricing" class="text-white">
+
+--
+
+</h2>
+
+</div>
+
+<i class="card-icon-indicator mdi mdi-cube-outline bg-inverse-icon-success"></i>
+
+</div>
+
+<h6 id="panel-pandora-change" class="text-white">
+
+--
+
+</h6>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div onclick="onClickEuropaPanel()" class="col-xl-9 stretch-card grid-margin">
+<div class="card">
+<div class="card-body">
+<div class="row">
+
+<div class="col-sm-7">
+
+<h5 id="symbolTicker">
+
+--
+
+</h5>
+
+<p class="text-muted">
+ 
+<b id="symbolName">
+
+--
+
+</b>
+
+/
+
+<b id="symbolSector">
+
+--
+
+</b>
+
+</p>
+
+</div>
+
+</div>
+
+<div class="row" style="display:none"> 
+
+<div class="col-sm-4">
+
+<div class="card mb-3 mb-sm-0">
+
+<div class="card-body py-3 px-4">
+
+<p class="m-0 survey-head">
+
+1M
+
+</p>
+
+<div class="d-flex justify-content-between align-items-end flot-bar-wrapper">
+
+<div>
+
+<h3 class="m-0 survey-value">
+
+0.85025
+
+</h3>
+
+<p class="text-success m-0">
+
++0.0045 / +18.33%
+
+</p>
+
+</div>
+
+                              <div id="earningChart" class="flot-chart" style="padding: 0px;"><canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 64px; height: 51px;" width="64" height="51"></canvas><canvas class="flot-overlay" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 64px; height: 51px;" width="64" height="51"></canvas></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="card mb-3 mb-sm-0">
+                          <div class="card-body py-3 px-4">
+
+
+
+<p class="m-0 survey-head">
+
+5M
+
+</p>
+
+<div class="d-flex justify-content-between align-items-end flot-bar-wrapper">
+
+<div>
+
+<h3 class="m-0 survey-value">
+
+0.85025
+
+</h3>
+
+<p class="text-success m-0">
+
++0.0045 / +18.33%
+
+</p>
+
+</div>
+
+                              <div id="productChart" class="flot-chart" style="padding: 0px;"><canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 64px; height: 51px;" width="64" height="51"></canvas><canvas class="flot-overlay" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 64px; height: 51px;" width="64" height="51"></canvas></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="card">
+                          <div class="card-body py-3 px-4">
+
+<p class="m-0 survey-head">
+
+30M
+
+</p>
+
+<div class="d-flex justify-content-between align-items-end flot-bar-wrapper">
+
+<div>
+
+<h3 class="m-0 survey-value">
+
+0.85025
+
+</h3>
+
+<p class="text-success m-0">
+
++0.0045 / +18.33%
+
+</p>
+
+</div>
+
+                              <div id="orderChart" class="flot-chart" style="padding: 0px;"><canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 64px; height: 51px;" width="64" height="51"></canvas><canvas class="flot-overlay" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 64px; height: 51px;" width="64" height="51"></canvas></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row my-3">
+                      <div class="col-sm-12">
+                    
+  <canvas id="mycanvas"></canvas>
+
+     </div>
+               
+                        
+                    </div>
+                    <div class="row">
+
+<div style="visibility:hidden" class="col-sm-8">
+
+<p class="text-muted mb-0">
+
+DIONE is a lifestyle brand for the post-modern Saturnalian. 
+
+<a target="blank" class="text-muted mb-0" href="https://en.wikipedia.org/wiki/Dione_(moon)" >
+
+<b>
+
+Learn More
+
+</b>
+
+</a>
+
+</p>
+
+</div>
+
+<div class="col-sm-4">
+
+<p class="mb-0 text-muted">
+
+Live Pricing
+
+</p>
+
+<h5 id="bottom-corner-symbol-pricing" class="d-inline-block survey-value mb-0">
+
+--
+
+</h5>
+                        
+<p id="bottom-corner-symbol-diff" class="d-inline-block text-primary mb-0">
+
+--
+
+</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            
+            
+          </div>
+          
+        </div><div class="cofntainer-scroller">
+      
+      <div class="d">
+        
+        
+        
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="scripting/config/config.js"></script>
+
+<script src="scripting/marketwatch/centersinglefocus.js"></script>
+
+<script src="scripting/marketwatch/sidepanel.js"></script>
+
+<script src="scripting/marketwatch/charting.js"></script>
+
+</body>
+
+</html>
