@@ -1,19 +1,30 @@
 
-
-// create initial empty chart
 var ctx_live = document.getElementById("mycanvas");
+
 var myChart = new Chart(ctx_live, {
-  type: 'line',
-  data: {
+
+    type: 'line',
+
+    data: {
+
     labels: [],
+
     datasets: [{
-      data: [],
-      borderWidth: 1,
-      borderColor:'#00c0ef',
-      label: 'DIONE',
-    }]
-  },
+    
+        data: [],
+
+        borderWidth: 1,
+
+        borderColor:'#00c0ef',
+
+        label: apiSymbol,
+
+        }]
+
+    },
+
   options: {
+
     responsive: true,
     title: {
       display: false,
@@ -50,7 +61,7 @@ var getData = function() {
 
     $.ajax({
 
-        url: 'https://api2.napkinexchange.softwareshinobi.digital/candlestick/history/CALLISTO',
+		url: apiURLBase + "/candlestick/history/" + apiSymbol,
 
         success: function(data) {
 
@@ -68,11 +79,13 @@ var getData = function() {
 
                 console.log("value / " + value);
 
-                console.log("value.ask / " + value.ask);
+                console.log("value.marketDate / " + value.marketDate);
 
-                myChart.data.labels.push(value.id);
+                console.log("value.stockPrice / " + value.stockPrice);
 
-                myChart.data.datasets[0].data.push(value.ask);
+                myChart.data.labels.push(value.marketDate);
+
+                myChart.data.datasets[0].data.push(value.stockPrice);
 
             });
 

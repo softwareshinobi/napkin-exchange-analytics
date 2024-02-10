@@ -12,12 +12,12 @@ $(document).ready(function () {
 });
 
 function updateEuropaPanel() {
-console.log("1");
+
 	$.ajax({
 
 		type: "GET",
 
-		url: "https://api2.napkinexchange.softwareshinobi.digital/candlestick/EUROPA",
+		url: apiURLBase + "/candlestick/EUROPA",
 
 		contentType: "application/json; charset=utf-8",
 
@@ -66,7 +66,7 @@ console.log("1");
 
 		type: "GET",
 
-		url: "https://api2.napkinexchange.softwareshinobi.digital/candlestick/PANDORA",
+		url: apiURLBase + "/candlestick/PANDORA",
 
 		contentType: "application/json; charset=utf-8",
 
@@ -115,7 +115,7 @@ function updateCALLISTOPanel() {
 
 		type: "GET",
 
-		url: "https://api2.napkinexchange.softwareshinobi.digital/candlestick/CALLISTO",
+		url: apiURLBase + "/candlestick/CALLISTO",
 
 		contentType: "application/json; charset=utf-8",
 
@@ -164,7 +164,7 @@ function updateDIONEPanel() {
 
 		type: "GET",
 
-		url: "https://api2.napkinexchange.softwareshinobi.digital/candlestick/DIONE",
+		url: apiURLBase + "/candlestick/DIONE",
 
 		contentType: "application/json; charset=utf-8",
 
