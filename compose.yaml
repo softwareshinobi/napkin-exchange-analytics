@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+
+    napkin-exchange-analytics:
+
+        container_name: napkin-exchange-analytics
+        
+        image: softwareshinobi/napkin-exchange-analytics
+
+        build: 
+
+            context: .
+
+            dockerfile: Dockerfile
+
+        restart: always
+
+        ports:
+
+            - "80:80"
