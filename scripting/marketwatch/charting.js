@@ -15,7 +15,7 @@ var myChart = new Chart(ctx_live, {
 
         borderWidth: 1,
 
-        borderColor:'#00c0ef',
+        borderColor:'#00004C',
 
         label: "",
 
@@ -45,7 +45,7 @@ var myChart = new Chart(ctx_live, {
             // Hide every 2nd tick label
             return index % 4112 === 0 ? '' : '';
           },
-          color: 'red',
+          color: '#00004C',
         }
       }
     }
